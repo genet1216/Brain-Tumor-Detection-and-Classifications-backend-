@@ -22,7 +22,11 @@ def setup_gpu():
         policy = tf.keras.mixed_precision.Policy('mixed_float16')
         tf.keras.mixed_precision.set_global_policy(policy)
         logger.info("Mixed precision enabled")
-    
+         
+
+
+
+         
     # Enable XLA
     if Config.USE_XLA:
         tf.config.optimizer.set_jit(True)
